@@ -33,9 +33,9 @@ public class Test {
         String path = "src";
         init(path);
 
-        SootClass appclass = Scene.v().loadClassAndSupport("examples.airline.Bug");
+        SootClass appclass = Scene.v().loadClassAndSupport("examples.airline.Main");
 
-        SootMethod method = appclass.getMethodByName("run");
+        SootMethod method = appclass.getMethodByName("main");
         printCallFromMethod(method);
     }
 
@@ -43,9 +43,6 @@ public class Test {
         JimpleBody jimpleBody = (JimpleBody)method.retrieveActiveBody();
 
         UnitGraph g = new BriefUnitGraph(jimpleBody);
-        Chain<Local> locals = jimpleBody.getLocals();
-
-        Local local = jimpleBody.getThisLocal();
 
         Iterator<Unit> it = g.iterator();
 
