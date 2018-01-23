@@ -1,4 +1,4 @@
-### using soot for software analysis
+### Using Soot For Software Analysis
 This project is part of Java software analysis research. Analysing Java program by using [soot](https://github.com/Sable/soot)
 
 #### Project Structure
